@@ -3,8 +3,7 @@
 Movie Library generates a simple webpage with a list of Movies in your Digital library. You can use the search bar to filter the list; this is useful to check if you own a Movie.
 For example:
   - If you want to check if you own 'Back to The Future', you can simply start typing 'Back to The Future' in the search bar.
-  - If Movie is listed, you own it.
-  - If not, you can add it to your shopping list!
+  - If Movie is listed, it's in your library.
 
 # Setting up
 ### Edit update.bat
@@ -20,7 +19,7 @@ For example:
 
 # Development
 
-There are lot's of opportunities for developing this project further, here are some examples of what you can do:
+There are lots of opportunities for developing this project further, here are some examples of what you can do:
   - Link each Movie in list to its file location. Copy file location when user clicks on Movie title.
   - Dynamically load video in webpage when user clicks on Movie name.
   - Load a trailer to the Movie when user clicks on Movie name.
