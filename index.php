@@ -23,42 +23,7 @@ $your_name = 'JOHN DOE';
             <h2 class="text-center text-primary display-4"><i class="fas fa-film"></i> Movie Library</h2>
             <input type="text" id="searchbar" placeholder="Search for a Movie.."/>
 
-<?php
-        // Update Movie List
-        exec('update.bat');
-
-        // File containing list of movies.
-        $list = fopen("Movies.xml","r");
-
-            // start list
-            echo '<ul id="movie-list" class="list-group movie-list">';
-
-        $movies = [];
-        while(! feof($list))
-        {
-            // create array of movie names
-            array_push( $movies, (substr(fgets($list), 0, -6)) );
-        }
-
-        fclose($list);
-
-        // make movie array alphabetical order
-        sort($movies);
-
-
-// print list item for each movie
-foreach ( $movies as $movie )
-{
-    echo '<li class="list-group-item">'.htmlentities($movie,ENT_IGNORE).'</li>';
-}
-
-// end list
-echo '</ul>';
-
-// end container
-echo '</div>';
-
-?>
+<?php require 'php/get-movie-list.php'; ?>
 
 <script src="js/filter.js"></script>
 
